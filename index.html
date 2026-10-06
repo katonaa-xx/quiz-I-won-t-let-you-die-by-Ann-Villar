@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang= "uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>тест: чи зможеш ти вижити на сторінках "я не дам тебе умереть?" </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="start-screen">
+    <h1>тест: чи зможеш ти вижити на сторінках "я не дам тебе умереть?"</h1>
+    <button id="start-button">прийняти виклик</button>
+ </main>
+    <main id="quiz-screen" style="display: none;">
+    <div id="quiz-info">
+        <span id="question-number">1 / 20</span>
+        <span id="score">0 правильних</span>
+    </div>
+
+    <div id="progress-bar">
+    <div id="progress"></div>
+</div>
+
+    <h2 id="question">питання</h2>
+
+    <div id="answers"></div>
+</main>
+<main id="result-screen" style="display: none;">
+    <h2>тест завершено</h2>
+
+    <p id="result-score">0 / 20</p>
+
+    <p id="result-rank"></p>
+
+    <p id="result-text"></p>
+
+    <button id="restart-button">пройти ще раз</button>
+</main>
+    <script src="script.js"></script> 
+</body>
+</html>
