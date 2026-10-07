@@ -423,32 +423,30 @@ body::after {
 @media (max-width: 600px) {
 
     body {
-        padding: 15px;
+        padding: 10px;
     }
 
     main {
         width: 100%;
         max-width: none;
 
-        padding: 40px 25px;
+        padding: 35px 18px;
     }
 
     h1 {
-        font-size: 30px;
-
+        font-size: 28px;
         line-height: 1.25;
 
         margin-bottom: 35px;
-
-        letter-spacing: 0.5px;
     }
 
     button {
-        padding: 14px 25px;
         font-size: 16px;
+        padding: 14px 20px;
     }
 
     #quiz-info {
+        width: 100%;
         max-width: none;
 
         margin-bottom: 20px;
@@ -457,56 +455,55 @@ body::after {
     }
 
     #progress-bar {
+        width: 100%;
         max-width: none;
 
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
 
     #question {
-        font-size: 22px;
-
+        font-size: 24px;
         line-height: 1.4;
 
         margin-bottom: 25px;
     }
 
     #answers {
+        width: 100%;
         max-width: none;
 
         gap: 10px;
     }
 
     #answers button {
-        padding: 14px 15px;
+        width: 100%;
 
-        font-size: 14px;
+        padding: 15px 12px;
 
-        line-height: 1.4;
+        font-size: 15px;
+        line-height: 1.35;
     }
 
     #result-screen h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     #result-score {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     #result-rank {
-        font-size: 15px;
-
+        font-size: 16px;
         letter-spacing: 2px;
     }
 
     #result-text {
         font-size: 15px;
-
         line-height: 1.6;
     }
 
     #restart-button {
-        min-width: 0;
-
         width: 100%;
+        min-width: 0;
     }
 }
