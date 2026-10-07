@@ -367,12 +367,13 @@ function checkAnswer(index) {
         score++;
 
         playSound("correct");
-           redLevel = Math.max(0, redLevel - 0.14);
 
-    document.body.style.setProperty(
-        "--red-level",
-        redLevel
-    );
+        redLevel = Math.max(0, redLevel - 0.14);
+
+        document.body.style.setProperty(
+            "--red-level",
+            redLevel
+        );
 
         selectedButton.classList.add("correct");
 
@@ -381,40 +382,26 @@ function checkAnswer(index) {
             " — правильно 🩸";
 
     } else {
-          playSound("wrong");
-          redLevel = 0.28;
 
-    document.body.style.setProperty(
-        "--red-level",
-        redLevel
-    );
+        playSound("wrong");
 
-           correctStreak = 0;
-           document.body.classList.add("wrong-flash");
+        redLevel = 0.28;
 
-          quizScreen.classList.remove("wrong-effect");
-          quizScreen.offsetHeight;
-          quizScreen.classList.add("wrong-effect");
+        document.body.style.setProperty(
+            "--red-level",
+            redLevel
+        );
 
-           document.body.classList.remove("wrong-flash");
-           document.body.offsetHeight;
-           document.body.classList.add("wrong-flash");
-
-
+        quizScreen.classList.remove("wrong-effect");
+        quizScreen.offsetHeight;
+        quizScreen.classList.add("wrong-effect");
 
         selectedButton.classList.add("wrong");
 
         selectedButton.textContent =
             "✕ " + selectedButton.textContent +
             " — неправильно 💀";
-
-        buttons[question.correct].classList.add("correct");
-
-        buttons[question.correct].textContent =
-            "✓ " + buttons[question.correct].textContent +
-            " — правильна відповідь 🩸";
     }
-
 
     setTimeout(function() {
 
@@ -426,15 +413,13 @@ function checkAnswer(index) {
 
         } else {
 
-             playSound("finish");
+            playSound("finish");
             showResult();
 
         }
 
     }, 1200);
-
 }
-
 
 function showResult() {
 
