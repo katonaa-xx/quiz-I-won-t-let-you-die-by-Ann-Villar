@@ -404,21 +404,109 @@ button:active {
 }
 /* червоний спалах при неправильній відповіді */
 
-body.wrong-flash::after {
+body::after {
     content: "";
 
     position: fixed;
     inset: 0;
 
-    background: rgba(120, 0, 0, 0.28);
+    background: rgba(120, 0, 0, var(--red-level, 0));
 
     pointer-events: none;
 
     z-index: 999;
 
-    transition: opacity 0.5s ease;
-}
-
-body {
     transition: background 0.5s ease;
+}
+/* адаптація для телефонів */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    main {
+        width: 100%;
+        max-width: none;
+
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+
+        line-height: 1.25;
+
+        margin-bottom: 35px;
+
+        letter-spacing: 0.5px;
+    }
+
+    button {
+        padding: 14px 25px;
+        font-size: 16px;
+    }
+
+    #quiz-info {
+        max-width: none;
+
+        margin-bottom: 20px;
+
+        font-size: 12px;
+    }
+
+    #progress-bar {
+        max-width: none;
+
+        margin-bottom: 25px;
+    }
+
+    #question {
+        font-size: 22px;
+
+        line-height: 1.4;
+
+        margin-bottom: 25px;
+    }
+
+    #answers {
+        max-width: none;
+
+        gap: 10px;
+    }
+
+    #answers button {
+        padding: 14px 15px;
+
+        font-size: 14px;
+
+        line-height: 1.4;
+    }
+
+    #result-screen h2 {
+        font-size: 28px;
+    }
+
+    #result-score {
+        font-size: 40px;
+    }
+
+    #result-rank {
+        font-size: 15px;
+
+        letter-spacing: 2px;
+    }
+
+    #result-text {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    #restart-button {
+        min-width: 0;
+
+        width: 100%;
+    }
 }
